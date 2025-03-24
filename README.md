@@ -6,6 +6,11 @@ Official code of ''Mixture of Lookup Experts''
     <img src="https://img.shields.io/badge/arXiv-2503.15798-b31b1b.svg?style=flat" /></a>
 </p>
 
+
+<p align="center">
+<img src="https://arxiv.org/html/2503.15798v1/x2.png" width="700">
+</p>
+
 ## Environment
 + torch                     2.0.1
 + transformers              4.38.2
