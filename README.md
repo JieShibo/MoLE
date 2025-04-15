@@ -19,15 +19,14 @@ Official code of ''Mixture of Lookup Experts''
 #### Dense Models
 + modeling_dense.py
   
-To be uploaded
 #### Moe Models
 + modeling_moe.py
   
-To be uploaded
 #### MoLE Models
 + modeling_mole.py (training)
 + modeling_mole_rep.py (inference)
   
+## HF Checkpoints 
 To be uploaded
 
 ## Reparameterize MoLE for Inference
