@@ -1,10 +1,14 @@
 # MoLE
-Official code of ''Mixture of Lookup Experts''
+Official code of ''Mixture of Lookup Experts''.
 
 <p align="left">
 <a href="https://arxiv.org/abs/2503.15798" alt="arXiv">
     <img src="https://img.shields.io/badge/arXiv-2503.15798-b31b1b.svg?style=flat" /></a>
 </p>
+
+MoLE is a novel edge-friendly LLM architecture. With the same number of activated parameters, MoLE achieves:
++ Latency and memory overhead comparable to dense models
++ Performance on par with Mixture-of-Experts (MoE) models.
 
 
 <p align="center">
@@ -15,7 +19,10 @@ Official code of ''Mixture of Lookup Experts''
 + torch                     2.0.1
 + transformers              4.38.2
 
-## Models
+## Pretraining
+Please refer to ```pretrain``` folder.
+
+## HF Models
 #### Dense Models
 + modeling_dense.py
   
@@ -23,11 +30,11 @@ Official code of ''Mixture of Lookup Experts''
 + modeling_moe.py
   
 #### MoLE Models
-+ modeling_mole.py (training)
-+ modeling_mole_rep.py (inference)
++ modeling_mole.py (for training)
++ modeling_mole_rep.py (for inference)
   
 ## HF Checkpoints 
-To be uploaded
+To be uploaded.
 
 ## Reparameterize MoLE for Inference
 ```bash
