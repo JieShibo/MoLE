@@ -91,7 +91,7 @@ class MLP(MegatronModule):
             tp_comm_buffer_name='fc2',
         )
         self.num_experts = self.config.num_mole_experts
-        assert self.num_mole_experts > 0
+        assert self.num_experts > 0
 
         self.experts = GroupedMLP(self.num_experts, self.config)
         self.moe_router = build_module(
