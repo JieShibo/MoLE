@@ -69,7 +69,8 @@ torchrun $DISTRIBUTED_ARGS pretrain_gpt.py \
   --min-lr 6e-5 \
   --save-interval 500 \
   --tokenizer-name-or-path ./tokenizer \
-  --train-iters 50000
+  --train-iters 50000 \
+  --num-experts 4
 ```
 $DISTRIBUTED_ARGS should be configured based on  specific hardware setup (e.g., number of nodes, GPUs per node, and network settings). Additionally, --micro-batch-size needs to be adjusted according to the available GPU memory.
 
