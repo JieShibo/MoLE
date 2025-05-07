@@ -55,8 +55,7 @@ def build_tokenizer(args):
             args.tokenizer_name_or_path,
             vocab_extra_ids=args.vocab_extra_ids,
             model_max_length=args.seq_length,
-            use_fast=args.tokenizer_not_use_fast,
-            prompt_type=args.prompt_type,
+            use_fast=True,
             **hf_tokenizer_kwargs
         )
     else:
