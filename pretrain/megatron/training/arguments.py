@@ -551,8 +551,8 @@ def core_transformer_config_from_args(args, config_class=None):
     kw_args['deallocate_pipeline_outputs'] = True
     kw_args['pipeline_dtype'] = args.params_dtype
     kw_args['batch_p2p_comm'] = not args.overlap_p2p_comm
-    #kw_args['num_moe_experts'] = args.num_experts
-    kw_args['num_mole_experts'] = args.num_experts
+    kw_args['num_moe_experts'] = args.num_experts
+    kw_args['num_mole_experts'] = args.num_mole_experts
     kw_args['rotary_interleaved'] = args.rotary_interleaved
     if args.swiglu:
         kw_args['activation_func'] = F.silu
@@ -1576,6 +1576,8 @@ def _add_moe_args(parser):
                        help='Degree of expert model parallelism.')
     group.add_argument('--num-experts', type=int, default=None,
                        help='Number of Experts in MoE (None means no MoE)')
+    group.add_argument('--num-mole-experts', type=int, default=None,
+                       help='Number of Experts in MoLE')
     group.add_argument('--moe-router-load-balancing-type', type=str,
                        choices=['aux_loss', 'sinkhorn', "none"],
                        default='aux_loss',
