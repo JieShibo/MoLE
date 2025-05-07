@@ -28,18 +28,17 @@ torchrun $DISTRIBUTED_ARGS pretrain_gpt.py \
   --use-mcore-models \
   --disable-bias-linear \
   --seq-length 2048 \
-  --max-position-embedding 2048 \
+  --max-position-embeddings 2048 \
   --num-layers 12 \
   --hidden-size 768 \
   --ffn-hidden-size 3072 \
-  --num-attention-head 12 \
+  --num-attention-heads 12 \
   --init-method-std 0.01 \
   --attention-dropout 0.0 \
   --hidden-dropout 0.0 \
   --normalization RMSNorm \
   --position-embedding-type rope \
-  --untie-embeddings-and-output-weight \
-  --rotary-base 10000 \
+  --untie-embeddings-and-output-weights \
   --no-masked-softmax-fusion \
   --use-flash-attn \
   --no-check-for-nan-in-loss-and-grad \
@@ -72,7 +71,7 @@ torchrun $DISTRIBUTED_ARGS pretrain_gpt.py \
   --train-iters 50000 \
   --num-experts 4
 ```
-$DISTRIBUTED_ARGS should be configured based on  specific hardware setup (e.g., number of nodes, GPUs per node, and network settings). Additionally, --micro-batch-size needs to be adjusted according to the available GPU memory.
+`$DISTRIBUTED_ARGS` should be configured based on specific hardware setup (e.g., number of nodes, GPUs per node, and network settings). Additionally, `--micro-batch-size` needs to be adjusted according to the available GPU memory.
 
 
 ## Note
