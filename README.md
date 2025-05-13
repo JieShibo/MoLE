@@ -25,7 +25,7 @@ Please refer to ```pretrain``` folder.
 ## HF Models
 #### Dense Models
 + modeling_dense.py
-  
+
 #### Moe Models
 + modeling_moe.py
   
@@ -34,7 +34,22 @@ Please refer to ```pretrain``` folder.
 + modeling_mole_rep.py (for inference)
   
 ## HF Checkpoints 
-To be uploaded.
+All these models are trained on a 100B-token subset of the [Pile](https://github.com/EleutherAI/the-pile) dataset.
+
+For the MoLE model, we only provide the version before re-parameterization (i.e., during the training phase). Re-parameterization can be performed using the script provided below.
+
+| Models | # Activated Params | url |
+| ----- | ----- | ---|
+| Dense | 160M | https://huggingface.co/JieShibo/Dense-160M |
+| MoE-10E | 160M | https://huggingface.co/JieShibo/MoE-160M-10E |
+| MoLE-4E | 160M | https://huggingface.co/JieShibo/MoLE-160M-4E|
+| MoE-34E | 160M | https://huggingface.co/JieShibo/MoE-160M-34E |
+| MoLE-16E | 160M | https://huggingface.co/JieShibo/MoLE-160M-16E|
+| Dense | 410M | https://huggingface.co/JieShibo/Dense-410M |
+| MoE-10E | 410M | https://huggingface.co/JieShibo/MoE-410M-10E |
+| MoLE-4E | 410M | https://huggingface.co/JieShibo/MoLE-410M-4E|
+
+
 
 ## Reparameterize MoLE for Inference
 ```bash
