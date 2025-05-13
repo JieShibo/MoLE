@@ -36,7 +36,7 @@ Please refer to ```pretrain``` folder.
 ## HF Checkpoints 
 All these models are trained on a 100B-token subset of the [Pile](https://github.com/EleutherAI/the-pile) dataset.
 
-For the MoLE model, we only provide the version before re-parameterization (i.e., during the training phase). Re-parameterization can be performed using the script provided below.
+For the MoLE model, we only provide the checkpoints before re-parameterization (i.e., for the training phase). Re-parameterization can be performed using the script provided below.
 
 | Models | # Activated Params | url |
 | ----- | ----- | ---|
