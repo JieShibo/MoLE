@@ -22,7 +22,7 @@ MoLE is a novel edge-friendly LLM architecture. With the same number of activate
 ## Pretraining
 Please refer to ```pretrain``` folder.
 
-## HF Models
+## Models
 #### Dense Models
 + modeling_dense.py
 
@@ -33,21 +33,21 @@ Please refer to ```pretrain``` folder.
 + modeling_mole.py (for training)
 + modeling_mole_rep.py (for inference)
   
-## HF Checkpoints 
+## Checkpoints 
 All these models are trained on a 100B-token subset of the [Pile](https://github.com/EleutherAI/the-pile) dataset.
 
 For the MoLE model, we only provide the checkpoints before re-parameterization (i.e., for the training phase). Re-parameterization can be performed using the script provided below.
 
-| Models | # Activated Params | url |
+| Models | # Activated Params | URL |
 | ----- | ----- | ---|
-| Dense | 160M | https://huggingface.co/JieShibo/Dense-160M |
-| MoE-10E | 160M | https://huggingface.co/JieShibo/MoE-160M-10E |
-| MoLE-4E | 160M | https://huggingface.co/JieShibo/MoLE-160M-4E|
-| MoE-34E | 160M | https://huggingface.co/JieShibo/MoE-160M-34E |
-| MoLE-16E | 160M | https://huggingface.co/JieShibo/MoLE-160M-16E|
-| Dense | 410M | https://huggingface.co/JieShibo/Dense-410M |
-| MoE-10E | 410M | https://huggingface.co/JieShibo/MoE-410M-10E |
-| MoLE-4E | 410M | https://huggingface.co/JieShibo/MoLE-410M-4E|
+| Dense | 160M | 🤗 [JieShibo/Dense-160M](https://huggingface.co/JieShibo/Dense-160M) |
+| MoE-10E | 160M | 🤗 [JieShibo/MoE-160M-10E](https://huggingface.co/JieShibo/MoE-160M-10E) |
+| MoLE-4E | 160M | 🤗 [JieShibo/MoLE-160M-4E](https://huggingface.co/JieShibo/MoLE-160M-4E)|
+| MoE-34E | 160M | 🤗 [JieShibo/MoE-160M-34E](https://huggingface.co/JieShibo/MoE-160M-34E) |
+| MoLE-16E | 160M | 🤗 [JieShibo/MoLE-160M-16E](https://huggingface.co/JieShibo/MoLE-160M-16E)|
+| Dense | 410M | 🤗 [JieShibo/Dense-410M](https://huggingface.co/JieShibo/Dense-410M) |
+| MoE-10E | 410M | 🤗 [JieShibo/MoE-410M-10E](https://huggingface.co/JieShibo/MoE-410M-10E) |
+| MoLE-4E | 410M | 🤗 [JieShibo/MoLE-410M-4E](https://huggingface.co/JieShibo/MoLE-410M-4E)|
 
 
 
