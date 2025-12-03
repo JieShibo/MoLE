@@ -653,7 +653,7 @@ class MoeDecoderLayer(nn.Module):
         hidden_states = self.post_attention_layernorm(hidden_states)
         hidden_states = hidden_states.view(-1, D)
         router_logits  = self.router(hidden_states)
-        routing_weights, selected_experts = torch.topk(router_logits, 10, dim=-1)
+        routing_weights, selected_experts = torch.topk(router_logits, 2, dim=-1)
         routing_weights = F.softmax(routing_weights, dim=1, dtype=torch.float32)
         routing_weights = routing_weights.to(hidden_states.dtype)
         final_hidden_states = torch.zeros_like(hidden_states)
